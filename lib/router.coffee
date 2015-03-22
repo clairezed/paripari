@@ -18,8 +18,8 @@ Router.route "/bets/ended",
   name: "bets.ended"
   template: "betsEnded"
   layoutTemplate: "tabsLayout"
-  # waitOn: ->
-  #   Meteor.subscribe 'pendingBets'
+  waitOn: ->
+    Meteor.subscribe 'endedBets'
 
 Router.route "/bets/cleared",
   controller: 'ApplicationController'
@@ -38,6 +38,16 @@ Router.route "/bets/:_id/close",
   controller: 'ApplicationController'
   name: "bets.close"
   template: "betsClose"
+  waitOn: ->
+    console.log @params._id
+    Meteor.subscribe 'bet', @params._id
+  data: ->
+    Bets.findOne _id: @params._id
+
+Router.route "/bets/:_id/clear",
+  controller: 'ApplicationController'
+  name: "bets.clear"
+  template: "betsClear"
   waitOn: ->
     console.log @params._id
     Meteor.subscribe 'bet', @params._id

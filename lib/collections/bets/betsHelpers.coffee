@@ -1,8 +1,10 @@
 Bets.helpers(
   isPending: ->
-    return (!this.endedAt && !this.clearedAt)
+    return (this.createdAt? && !this.endedAt && !this.clearedAt?)
   isEnded: ->
-    return !this.clearedAt
+    return (this.createdAt? && this.endedAt? && !this.clearedAt?)
   isCleared: ->
-    return !!this.clearedAt
+    return (this.createdAt? && this.endedAt? && this.clearedAt?)
+  creationDate: ->
+    return moment(this.createdAt).format('DD/MM/YY')
 )

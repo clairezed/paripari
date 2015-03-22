@@ -16,3 +16,4 @@ coffeescript
 aldeed:collection2
 aldeed:autoform
 dburles:collection-helpers
+momentjs:moment

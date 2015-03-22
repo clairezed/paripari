@@ -45,16 +45,12 @@ Bets.attachSchema new SimpleSchema(
 #     return !! userId
 
 
-# Helpers =========================================
-
-# Bets.helpers(
-#   creationDate: ->
-#     return moment(this.createdAt).format('DD/MM/YY')
-# )
-
 # Methods =========================================
 
 Meteor.methods
   deleteBet: (id) ->
     console.log "delete bet #{id}"
     return Bets.remove id
+  closeBet: (id) ->
+    Bets.update id, $set:
+      endedAt: new Date
