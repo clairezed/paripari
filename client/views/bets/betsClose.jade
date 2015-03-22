@@ -1,0 +1,11 @@
+template(name="betsClose")
+
+  +contentFor "headerButtonLeft"
+    +ionNavBackButton(path="bets.pending")
+
+  +contentFor "headerTitle"
+    h1.title=subject
+
+  +ionView
+    +ionContent(class="padding")
+      p=subject

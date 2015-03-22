@@ -1,0 +1,17 @@
+template(name="home")
+  +contentFor "headerTitle"
+    h1.title Home
+
+  //- +contentFor "headerButtonLeft"
+  //-   +ionNavBackButton
+  +ionView
+    +ionContent
+      +ionList
+        +ionItem(buttonRight=true avatar=true)
+          img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
+          h2 Titre1
+          p test 1
+          button.button.button-positive
+            +ionIcon(icon="ios-telephone")
+      .padding
+        a.button.button-positive.button-block(href="{{pathFor route='bets.new'}}" title="Home, sweet home") New bet

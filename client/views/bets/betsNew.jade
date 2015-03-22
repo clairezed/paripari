@@ -1,0 +1,18 @@
+template(name="betsNew")
+
+  +contentFor "headerButtonLeft"
+    +ionNavBackButton(path="bets.pending")
+
+  +contentFor "headerTitle"
+    h1.title Nouveau pari
+
+  +ionView
+    +ionContent(class="padding")
+      +autoForm(collection="Bets" id="createBetForm" type="insert")
+
+        +afFormGroup name='subject'
+        +afFormGroup name='profit'
+        +afFormGroup name='yes_player_name'
+        +afFormGroup name='no_player_name'
+
+        button(type="submit" class="btn btn-primary") Zou, un item de + !

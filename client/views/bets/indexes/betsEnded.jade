@@ -1,0 +1,22 @@
+template(name="betsEnded")
+  +ionView
+    +_tabsHeader
+
+    +ionContent
+      +ionList
+        each bets
+          +ionItem(buttonRight=true avatar=true)
+            img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
+            h2= subject
+            p test 1
+            button.button.button-positive
+              +ionIcon(icon="ios-telephone")
+        else
+          .padding
+            | Pas encore de pari terminé
+
+
+      .padding
+        a.button.button-positive.button-block(href="{{pathFor route='bets.new'}}" title="Home, sweet home") New bet
+
+    +_tabs

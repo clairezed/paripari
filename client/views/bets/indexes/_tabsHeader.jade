@@ -1,0 +1,20 @@
+template(name="_tabsHeader")
+
+  +contentFor "headerButtonLeft"
+    button.button.button-clear.pull-left(data-ion-menu-toggle="left")
+      +ionIcon(icon='android-menu')
+
+  +contentFor "headerTitle"
+    h1.title Mes paris
+
+  +contentFor "headerButtonRight"
+    a.button.button-clear.pull-right(href="{{pathFor route='bets.new'}}" title="Home, sweet home")
+      +ionIcon(icon='android-add-circle')
+
+
+  //- +ionHeaderBar(class="bar-positive")
+  //-   button.button.button-clear.pull-left(data-ion-menu-toggle="left")
+  //-     +ionIcon(icon='android-menu')
+  //-   h1.title Mes paris
+  //-   a.button.button-clear.pull-right(href="{{pathFor route='bets.new'}}" title="Home, sweet home")
+  //-     +ionIcon(icon='android-add-circle')

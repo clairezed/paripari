@@ -1,0 +1,15 @@
+template(name="layout")
+  +ionBody
+    //- +ionSideMenuContainer
+    //-   +ionSideMenus
+    //-     +ionSideMenu
+    //-       .bar.bar-header.bar-dark
+    //-         h1.title Left Menu
+    //-         .content.has-header
+    //-           .list
+    //-             .item.item-icon-right(data-ion-menu-close='')
+    //-               | close
+
+    +ionNavBar(class="bar-positive")
+    +ionNavView
+      +yield
