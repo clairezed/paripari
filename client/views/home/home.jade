@@ -1,17 +1,15 @@
 template(name="home")
   +contentFor "headerTitle"
-    h1.title Home
+    h1.title Bienvenue sur PariPari !
 
   //- +contentFor "headerButtonLeft"
   //-   +ionNavBackButton
   +ionView
     +ionContent
-      +ionList
-        +ionItem(buttonRight=true avatar=true)
-          img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
-          h2 Titre1
-          p test 1
-          button.button.button-positive
-            +ionIcon(icon="ios-telephone")
-      .padding
-        a.button.button-positive.button-block(href="{{pathFor route='bets.new'}}" title="Home, sweet home") New bet
+      //- .padding.text-center
+      //-   p
+      //-     strong Would you please sign in ?
+      //-   p
+      //-     button.button.button-positive.sign-in-button(data-action="sign-in-facebook") Sign in with facebook
+      +atForm
+
