@@ -23,6 +23,14 @@ Bets.attachSchema new SimpleSchema(
     type: String
     label: 'Pari non'
     optional: true
+  winner_name:
+    type: String
+    label: 'Pari oui'
+    optional: true
+  winner_id:
+    type: String
+    label: 'Pari non'
+    optional: true
   createdAt: SchemaHelpers.createdAt
   updatedAt: SchemaHelpers.updatedAt
   endedAt:
@@ -54,3 +62,8 @@ Meteor.methods
   closeBet: (id) ->
     Bets.update id, $set:
       endedAt: new Date
+  setWinner: (data) ->
+    console.log "setWinner"
+    console.log data
+    Bets.update data.betId, $set:
+      winner_name: data.winnerName

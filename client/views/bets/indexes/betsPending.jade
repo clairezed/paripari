@@ -12,37 +12,9 @@ template(name="betsPending")
             h2= subject
             p avec #{no_player_name}
             +ionIcon(icon="android-arrow-dropright")
+        else
+          .padding
+            | Vous n'avez pas de pari en cours.
+            //- p Créez-en un nouveau !
 
     +_tabs
-
-
-
-
-
-
-
-
-  //- +ionView
-  //-   +_tabsHeader
-
-  //-   +ionContent
-  //-     +ionList
-  //-       each bets
-  //-         +ionItem(buttonRight=true avatar=true)
-  //-           img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
-  //-           h2= subject
-  //-           p test 1
-  //-           button.button.button-positive
-  //-             +ionIcon(icon="ios-telephone")
-  //-       //- +ionItem(buttonRight=true avatar=true)
-  //-       //-   img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
-  //-       //-   h2 Titre1
-  //-       //-   p test 1
-  //-       //-   button.button.button-positive
-  //-       //-     +ionIcon(icon="ios-telephone")
-
-
-  //-     .padding
-  //-       a.button.button-positive.button-block(href="{{pathFor route='bets.new'}}" title="Home, sweet home") New bet
-
-  //-   +_tabs

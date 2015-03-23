@@ -1,12 +1,13 @@
 Meteor.publish 'pendingBets', ->
   Bets.find {
-    endedAt: {"$exists": false}
+    winner_name: {"$exists": false}
     clearedAt: {"$exists": false}
   }
 
 Meteor.publish 'endedBets', ->
   Bets.find {
     endedAt: {"$exists": true}
+    winner_name: {"$exists": true}
     clearedAt: {"$exists": false}
   }
 

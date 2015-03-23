@@ -1,10 +1,15 @@
 Bets.helpers(
   isPending: ->
-    return (this.createdAt? && !this.endedAt && !this.clearedAt?)
+    return (@createdAt? && !@endedAt && !@clearedAt?)
+  isEndedAwaitingWinner: ->
+    return (@createdAt? && @endedAt? && !@clearedAt? && !@winner_name?)
   isEnded: ->
-    return (this.createdAt? && this.endedAt? && !this.clearedAt?)
+    return (@createdAt? && @endedAt? && !@clearedAt? && @winner_name?)
   isCleared: ->
-    return (this.createdAt? && this.endedAt? && this.clearedAt?)
+    return (@createdAt? && @endedAt? && @clearedAt?)
   creationDate: ->
-    return moment(this.createdAt).format('DD/MM/YY')
+    return moment(@createdAt).format('DD/MM/YY')
+  opponentWinStatus: ->
+    return null unless @winner_name?
+    if @winner_name is @no_player_name then 'gagnant' else 'perdant'
 )
