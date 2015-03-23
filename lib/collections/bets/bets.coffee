@@ -67,3 +67,6 @@ Meteor.methods
     console.log data
     Bets.update data.betId, $set:
       winner_name: data.winnerName
+  clearBet: (id) ->
+    Bets.update id, $set:
+      clearedAt: new Date

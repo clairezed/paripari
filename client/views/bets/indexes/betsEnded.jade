@@ -13,7 +13,7 @@ template(name="betsEnded")
             p avec #{no_player_name} ( #{opponentWinStatus})
             +ionIcon(icon="android-arrow-dropright")
         else
-          .padding
-            | Pas encore de pari terminé
+          +ionItem
+            p.centered Pas de pari terminé actuellement !
 
     +_tabs

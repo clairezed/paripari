@@ -12,4 +12,8 @@ Bets.helpers(
   opponentWinStatus: ->
     return null unless @winner_name?
     if @winner_name is @no_player_name then 'gagnant' else 'perdant'
+  mainWinStatus: ->
+    return null unless @winner_name?
+    console.log @opponentWinStatus()
+    if @opponentWinStatus() is 'perdant' then 'gagnant' else 'perdant'
 )

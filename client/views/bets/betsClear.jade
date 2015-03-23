@@ -1,0 +1,33 @@
+template(name="betsClear")
+
+  +contentFor "headerButtonLeft"
+    +ionNavBackButton(path="bets.cleared")
+
+  +contentFor "headerTitle"
+    h1.title=subject
+
+  +ionView
+    +ionContent(class="padding")
+      .list.card
+
+        .item
+          h2.centered=subject
+          p
+            | Lancé le
+            =creationDate
+        .item-body
+          .row
+            .col.col-50.centered
+              h3 Oui (#{mainWinStatus})
+              img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
+              p=yes_player_name
+            .col.col-50.centered
+              h3 Non (#{opponentWinStatus})
+              img(src="https://randomuser.me/api/portraits/thumb/women/27.jpg")
+              p=no_player_name
+          .row
+            .col
+              h4 Gain
+              p=profit
+          unless isCleared
+            button.button.button-block.button-positive(data-action="clear-bet")  Pari soldé !

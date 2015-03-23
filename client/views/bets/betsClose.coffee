@@ -5,6 +5,7 @@ Template.betsClose.helpers
     @isEndedAwaitingWinner()
 
 Template.betsClose.events
+  # close bet ==========================================
   'click [data-action=close-bet]': (event, template) ->
     console.log "click close"
     betId = this._id
@@ -13,7 +14,7 @@ Template.betsClose.events
       if error
         console.log error
     Meteor.call 'closeBet', betId, closeBetCallback
-
+  # set winner =========================================
   'click [data-action=set-winner]': (event, template) ->
     console.log 'click winner'
     console.log event.currentTarget.dataset.guess

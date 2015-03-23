@@ -26,8 +26,8 @@ Router.route "/bets/cleared",
   name: "bets.cleared"
   template: "betsCleared"
   layoutTemplate: "tabsLayout"
-  # waitOn: ->
-  #   Meteor.subscribe 'pendingBets'
+  waitOn: ->
+    Meteor.subscribe 'clearedBets'
 
 Router.route "/bets/new",
   controller: 'ApplicationController'
