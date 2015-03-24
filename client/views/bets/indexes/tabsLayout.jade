@@ -7,6 +7,9 @@ template(name="tabsLayout")
             h1.title Left Menu
           .content.has-header
             .list
+              .item.item-icon-right(data-action='logout' data-ion-menu-close='')
+                | Me déconnecter
+                +ionIcon(icon="log-out")
               .item.item-icon-right(data-ion-menu-close='')
                 | close
                 +ionIcon(icon="android-arrow-forward")

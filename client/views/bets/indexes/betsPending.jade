@@ -13,8 +13,10 @@ template(name="betsPending")
             p avec #{no_player_name}
             +ionIcon(icon="android-arrow-dropright")
         else
-          .padding
-            | Vous n'avez pas de pari en cours.
-            //- p Créez-en un nouveau !
+          +ionItem(path="bets.new")
+            p.centered
+              | Vous n'avez pas de pari en cours.
+            p.centered
+              strong Créez-en un nouveau !
 
     +_tabs

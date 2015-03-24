@@ -1,9 +1,13 @@
 # Public part ==================================================================
 
 Router.route "/",
-  controller: 'ApplicationController'
+  controller: 'HomeController'
   name: "home"
   template: "home"
+
+
+class @HomeController extends RouteController
+  layoutTemplate: "layout"
 
 Router.route "/bets/pending",
   controller: 'ApplicationController'
@@ -57,3 +61,8 @@ Router.route "/bets/:_id/clear",
 
 class @ApplicationController extends RouteController
   layoutTemplate: "layout"
+  onBeforeAction: ->
+    unless Meteor.userId()
+      @render "home"
+    else
+      @next()
