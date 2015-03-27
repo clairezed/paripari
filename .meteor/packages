@@ -6,18 +6,20 @@
 
 meteor-platform
 insecure
-iron:router
 fourseven:scss
+mquandalle:jade
+coffeescript
+iron:router
 meteoric:ionic-sass
 meteoric:ionicons-sass
 meteoric:ionic
-mquandalle:jade
-coffeescript
+meteoric:autoform-ionic
 aldeed:collection2
 aldeed:autoform
 dburles:collection-helpers
-momentjs:moment
+accounts-password
 accounts-facebook
 useraccounts:ionic
 service-configuration
-meteoric:autoform-ionic
+momentjs:moment
+
