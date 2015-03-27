@@ -22,11 +22,11 @@ AccountsTemplates.configure
 
   # Client-side Validation
   continuousValidation: false         # false
-  negativeValidation: true            # false
-  positiveValidation: true            # false
+  negativeValidation: false            # false
+  positiveValidation: false            # false
   negativeFeedback: false             # false
-  positiveFeedback: true              # false
-  showValidating: true                # false
+  positiveFeedback: false              # false
+  showValidating: false                # false
 
   # Links
   homeRoutePath: '/bets/pending'      # "/"

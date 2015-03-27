@@ -8,11 +8,11 @@ template(name="betsNew")
 
   +ionView
     +ionContent(class="padding")
-      +autoForm(collection="Bets" id="createBetForm" type="insert")
+      +autoForm(collection="Bets" id="createBetForm" type="insert" )
 
-        +afFormGroup name='subject'
-        +afFormGroup name='profit'
-        +afFormGroup name='yes_player_name'
-        +afFormGroup name='no_player_name'
+        +afFormGroup name='subject' label-type='stacked'
+        +afFormGroup name='profit' label-type='stacked'
+        +afFormGroup name='yes_player_name' label-type='stacked'
+        +afFormGroup name='no_player_name' label-type='stacked'
 
         button(type="submit" class="btn btn-primary") Zou, un item de + !

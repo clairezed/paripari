@@ -11,25 +11,38 @@ Bets.attachSchema new SimpleSchema(
     label: 'Gain'
   yes_player_name:
     type: String
-    label: 'Pari oui'
+    label: 'Personne d\'accord'
+    # autoValue: ->
+    #   'Moi'
+    custom: ->
+      otherPlayerName = this.field('no_player_name').value
+      noCurrentUserBetting = (this.value isnt 'Moi' and otherPlayerName isnt 'Moi')
+      if noCurrentUserBetting
+        return "oneMustBeMe"
   yes_player_id:
     type: String
-    label: 'Pari oui'
+    label: 'Id Personne d\'accord'
     optional: true
+    autoValue: ->
+      correspondingName = this.field('yes_player_name')
+      return Meteor.userId() if correspondingName.value is 'Moi'
   no_player_name:
     type: String
-    label: 'Pari oui'
+    label: 'Personne pas d\'accord'
   no_player_id:
     type: String
-    label: 'Pari non'
+    label: 'Id Personne pas d\'accord'
     optional: true
+    autoValue: ->
+      correspondingName = this.field('no_player_name')
+      return Meteor.userId() if correspondingName.value is 'Moi'
   winner_name:
     type: String
-    label: 'Pari oui'
+    label: 'Nom gagnant'
     optional: true
   winner_id:
     type: String
-    label: 'Pari non'
+    label: 'Id Gagnant'
     optional: true
   createdAt: SchemaHelpers.createdAt
   updatedAt: SchemaHelpers.updatedAt
