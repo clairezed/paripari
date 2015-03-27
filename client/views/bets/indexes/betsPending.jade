@@ -8,7 +8,7 @@ template(name="betsPending")
       +ionList
         each bets
           +ionItem( path="bets.close" _id=this._id class="item-icon-right" avatar=true)
-            img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
+            img(src="/default_avatar.png")
             h2= subject
             p avec #{opponentName}
             +ionIcon(icon="android-arrow-dropright")
