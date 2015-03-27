@@ -10,7 +10,7 @@ template(name="betsPending")
           +ionItem( path="bets.close" _id=this._id class="item-icon-right" avatar=true)
             img(src="https://randomuser.me/api/portraits/thumb/men/27.jpg")
             h2= subject
-            p avec #{no_player_name}
+            p avec #{opponentName}
             +ionIcon(icon="android-arrow-dropright")
         else
           +ionItem(path="bets.new")
