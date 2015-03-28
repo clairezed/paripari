@@ -12,6 +12,11 @@ Template.betsNew.helpers
       ]}).map (bet) ->
         bet.profit
 
+Template.betsNew.events
+  'click [data-set-guess]': (event, template) ->
+    event.preventDefault()
+    setCurrentBlock(event.target.dataset.setGuess)
+
 
 AutoForm.hooks
   createBetForm:
@@ -23,3 +28,12 @@ AutoForm.hooks
     onError: (operation, error, template)->
       console.log error
       # throwMessage(error.reason, 'danger')
+
+setCurrentBlock = (currentGuess) ->
+  $currentGuessBlock = $("[data-guess-block='#{currentGuess}']")
+  $currentGuessBlock.data('current-guess', true)
+  $currentGuessBlock.find('input').val('Moi').prop('readOnly', true)
+
+  $opponentBlock = $("[data-guess-block]").not($currentGuessBlock)
+  $opponentBlock.data('current-guess', false)
+  $opponentBlock.find('input').val('').prop('readOnly', false)
