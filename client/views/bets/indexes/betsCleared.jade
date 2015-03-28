@@ -13,8 +13,8 @@ template(name="betsCleared")
             p avec #{opponentName} ( #{opponentWinStatus})
             +ionIcon(icon="android-arrow-dropright")
         else
-          .padding
-            | Pas encore de pari soldé
+          +ionItem
+            p.centered Pas de pari soldé actuellement !
 
 
     +_tabs

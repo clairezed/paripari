@@ -37,6 +37,8 @@ Router.route "/bets/new",
   controller: 'ApplicationController'
   name: "bets.new"
   template: "betsNew"
+  waitOn: ->
+    Meteor.subscribe 'userBets'
 
 Router.route "/bets/:_id/close",
   controller: 'ApplicationController'

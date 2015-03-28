@@ -1,3 +1,18 @@
+Template.betsNew.helpers
+  opponentsName: () ->
+    bets = Bets.find( { $or : [
+      {yes_player_id: Meteor.userId()},
+      {no_player_id: Meteor.userId()}
+      ]}).map (bet) ->
+        bet.opponentName()
+  profits: () ->
+    bets = Bets.find( { $or : [
+      {yes_player_id: Meteor.userId()},
+      {no_player_id: Meteor.userId()}
+      ]}).map (bet) ->
+        bet.profit
+
+
 AutoForm.hooks
   createBetForm:
     onSuccess: (operation, result, template)->
