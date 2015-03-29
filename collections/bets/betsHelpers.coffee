@@ -17,4 +17,6 @@ Bets.helpers(
   mainWinStatus: ->
     return null unless @winner_name?
     if @opponentWinStatus() is 'perdant' then 'gagnant' else 'perdant'
+  defaultYesPlayerName: ->
+    return "Moi"
 )

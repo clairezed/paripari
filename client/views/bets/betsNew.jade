@@ -11,24 +11,29 @@ template(name="betsNew")
       //- +quickForm(collection="Bets" id="createBetForm" type="insert" )
       +autoForm(collection="Bets" id="createBetForm" type="insert" )
 
-        .padding
-          +afFormGroup name='subject' label-type='stacked' placeholder="affirmation à laquelle on peut répondre par oui ou non" data-component="subject"
-        .row
+        +afFormGroup name='subject' label-type='stacked' placeholder="affirmation à laquelle on peut répondre par oui ou non" data-component="subject"
+        .item.item-toggle
+          | Mon choix
+          label.toggle.toggle-assertive
+            input(type="checkbox" data-toggle="guess")
+            .track
+              .handle
+
+        .row.no-padding
           //- Yes part -----------------------------------------------
-          .col-50.text-center(data-guess-block="yes" data-current-guess="true")
+          .col-50.guess-block(data-guess-block="yes" data-current-guess="true")
             h3 OUI !
             img(src="/default_avatar.png")
-            +afFieldInput name='yes_player_name' placeholder="Nom opposant" value="Moi" readonly='true'
-            button.button.button-calm(data-set-guess="yes") C'est mon avis !
+            +afFieldInput name='yes_player_name' placeholder="Nom opposant" value=defaultYesPlayerName readonly='true'
+            //- button.button.button-calm(data-set-guess="yes") C'est mon avis !
           //- No part ----------------------------------------------
-          .col-50.text-center(data-guess-block="no" data-current-guess="false")
+          .col-50.guess-block(data-guess-block="no" data-current-guess="false")
             h3 NON !
             img(src="/default_avatar.png")
-            +afFieldInput name='no_player_name' placeholder="Nom opposant"
-            button.button.button-calm(data-set-guess="no") C'est mon avis !
+            +afFieldInput name='no_player_name' placeholder="Nom opposant" autocomplete="off" spellcheck="off" data-source='opponentsName' class="typeahead"
+            //- button.button.button-calm(data-set-guess="no") C'est mon avis !
             //- +afFormGroup name='no_player_name' label-type='stacked'
-        .padding
-          +afFormGroup name='profit' label-type='stacked'
+        +afFormGroup name='profit' label-type='stacked'
 
         .padding
           button(type="submit" class="button button-positive button-block") Créer
