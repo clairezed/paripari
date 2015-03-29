@@ -10,14 +10,14 @@ App.info({
 });
 
 // Set up resources such as icons and launch screens.
-// App.icons({
-//   'iphone': 'icons/icon-60.png',
-//   'iphone_2x': 'icons/icon-60@2x.png',
-//   'android_ldpi':
-//   'android_mdpi':
-//   'android_hdpi':
-//   'android_xhdpi':
-// });
+App.icons({
+  // 'iphone': 'icons/icon-60.png',
+  // 'iphone_2x': 'icons/icon-60@2x.png',
+  'android_ldpi': 'icons/logo01.jpg'
+  'android_mdpi': 'icons/logo01.jpg'
+  'android_hdpi': 'icons/logo01.jpg'
+  'android_xhdpi': 'icons/logo01.jpg'
+});
 
 // App.launchScreens({
 //   'iphone': 'splash/Default~iphone.png',
