@@ -8,6 +8,11 @@ Router.route "/",
 
 class @HomeController extends RouteController
   layoutTemplate: "layout"
+  onBeforeAction: ->
+    if Meteor.userId()
+      @redirect "/bets/pending"
+    else
+      @next()
 
 Router.route "/bets/pending",
   controller: 'ApplicationController'

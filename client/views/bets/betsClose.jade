@@ -23,21 +23,21 @@ template(name="betsClose")
             .row
               .col.col-50.centered.hoverable(data-action="set-winner" data-guess=yes_player_name)
                 h3 Oui
-                img(src="/default_avatar.png")
+                img.medium(src="/default_avatar.png")
                 p=yes_player_name
               .col.col-50.centered.hoverable(data-action="set-winner" data-guess=no_player_name)
                 h3 Non
-                img(src="/default_avatar.png")
+                img.medium(src="/default_avatar.png")
                 p=no_player_name
           else
             .row
               .col.col-50.centered
                 h3 Oui
-                img(src="/default_avatar.png")
+                img.medium(src="/default_avatar.png")
                 p=yes_player_name
               .col.col-50.centered
                 h3 Non
-                img(src="/default_avatar.png")
+                img.medium(src="/default_avatar.png")
                 p=no_player_name
           .row
             .col

@@ -10,14 +10,14 @@ App.info({
 });
 
 // Set up resources such as icons and launch screens.
-App.icons({
-  // 'iphone': 'icons/icon-60.png',
-  // 'iphone_2x': 'icons/icon-60@2x.png',
-  'android_ldpi': 'icons/logo01.jpg'
-  'android_mdpi': 'icons/logo01.jpg'
-  'android_hdpi': 'icons/logo01.jpg'
-  'android_xhdpi': 'icons/logo01.jpg'
-});
+// App.icons({
+//   'iphone': 'resources/icons/icon-hdpi.png',
+//   'iphone_2x':  'resources/icons/icon-hdpi.png',
+//   'android_ldpi': 'resources/icons/icon-ldpi.png'
+//   'android_mdpi': 'resources/icons/icon-mdpi.png'
+//   'android_hdpi': 'resources/icons/icon-hdpi.png'
+//   'android_xhdpi': 'resources/icons/icon-xhdpi.png'
+// });
 
 // App.launchScreens({
 //   'iphone': 'splash/Default~iphone.png',
@@ -33,7 +33,7 @@ App.icons({
 // });
 
 // Set PhoneGap/Cordova preferences
-App.setPreference('BackgroundColor', '0xff0000ff');
+// App.setPreference('BackgroundColor', '0xff0000ff');
 // App.setPreference('HideKeyboardFormAccessoryBar', true);
 
 // Pass preferences for a particular PhoneGap/Cordova plugin

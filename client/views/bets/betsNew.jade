@@ -23,13 +23,13 @@ template(name="betsNew")
           //- Yes part -----------------------------------------------
           .col-50.guess-block(data-guess-block="yes" data-current-guess="true")
             h3 OUI !
-            img(src="/default_avatar.png")
+            img.medium(src="/default_avatar.png")
             +afFieldInput name='yes_player_name' placeholder="Nom opposant" value=defaultYesPlayerName readonly='true'
             //- button.button.button-calm(data-set-guess="yes") C'est mon avis !
           //- No part ----------------------------------------------
           .col-50.guess-block(data-guess-block="no" data-current-guess="false")
             h3 NON !
-            img(src="/default_avatar.png")
+            img.medium(src="/default_avatar.png")
             +afFieldInput name='no_player_name' placeholder="Nom opposant" autocomplete="off" spellcheck="off" data-source='opponentsName' class="typeahead"
             //- button.button.button-calm(data-set-guess="no") C'est mon avis !
             //- +afFormGroup name='no_player_name' label-type='stacked'
