@@ -2,9 +2,9 @@
   "name": "paripari",
   "scripts": {
     "start": "meteor run --settings .config/settings-development.json",
-    "dev web": "meteor run --settings .config/settings-development.json",
-    "dev device": "meteor run android-device --settings .config/settings-development.json",
-    "prod web": "meteor run --settings .config/settings-production.json",
-    "prod device": "meteor run android-device --mobile-server http://paripari.meteor.com --settings .config/settings-production.json"
+    "dev-web": "meteor run --settings .config/settings-development.json",
+    "dev-device": "meteor run android-device --settings .config/settings-development.json",
+    "prod-web": "meteor run --settings .config/settings-production.json",
+    "prod-device": "meteor run android-device --mobile-server http://paripari.meteor.com --settings .config/settings-production.json"
   }
 }
