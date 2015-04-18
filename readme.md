@@ -10,5 +10,6 @@ You can use npm scripts under package.json to launch the app.
 *Examples :*
 
 `$ npm start` : run app on local machine with dev settings
+
 `$ npm run prod device` : install and run app on your android device, using remote DB from paripari.meteor.com (you can change it).
 

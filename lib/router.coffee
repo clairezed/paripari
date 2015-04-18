@@ -13,6 +13,7 @@ class @HomeController extends RouteController
       @redirect "/bets/pending"
     else
       @next()
+  fastRender: true
 
 Router.route "/bets/pending",
   controller: 'ApplicationController'
@@ -50,7 +51,6 @@ Router.route "/bets/:_id/close",
   name: "bets.close"
   template: "betsClose"
   waitOn: ->
-    console.log @params._id
     Meteor.subscribe 'bet', @params._id
   data: ->
     Bets.findOne _id: @params._id
@@ -73,3 +73,4 @@ class @ApplicationController extends RouteController
       @render "home"
     else
       @next()
+  fastRender: true

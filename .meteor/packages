@@ -23,3 +23,5 @@ useraccounts:ionic
 service-configuration
 momentjs:moment
 
+fastclick
+meteorhacks:fast-render
