@@ -13,3 +13,10 @@ You can use npm scripts under package.json to launch the app.
 
 `$ npm run prod device` : install and run app on your android device, using remote DB from paripari.meteor.com (you can change it).
 
+
+###Hacks
+
+Below are hacks currently used in the app, due to bugs or limits from some of the packages that are used. I watch the repos for commits fixing it, that could enable me to remove hacks.
+
+- [white screen when keyboard active on android](https://github.com/meteoric/meteor-ionic/issues/130)
+

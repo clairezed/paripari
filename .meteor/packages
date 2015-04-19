@@ -12,7 +12,6 @@ coffeescript
 iron:router
 meteoric:ionic-sass
 meteoric:ionicons-sass
-meteoric:ionic
 meteoric:autoform-ionic
 aldeed:collection2
 aldeed:autoform
@@ -24,4 +23,4 @@ service-configuration
 momentjs:moment
 
 fastclick
-meteorhacks:fast-render
+meteoric:ionic
