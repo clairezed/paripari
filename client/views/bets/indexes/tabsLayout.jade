@@ -3,16 +3,17 @@ template(name="tabsLayout")
     +ionSideMenuContainer(side="left")
       +ionSideMenus
         +ionSideMenu
-          .bar.bar-header.bar-dark
+          .bar.bar-header.bar-dark(data-ion-menu-close='')
             h1.title Left Menu
+            //- +ionIcon(icon="android-arrow-forward")
           .content.has-header
             .list
-              .item.item-icon-right(data-action='logout' data-ion-menu-close='')
+              .item.item-icon-right(data-action='logout')
                 | Me déconnecter
                 +ionIcon(icon="log-out")
-              .item.item-icon-right(data-ion-menu-close='')
-                | close
-                +ionIcon(icon="android-arrow-forward")
+              //- .item.item-icon-right(data-ion-menu-close='')
+              //-   | close
+              //-   +ionIcon(icon="android-arrow-forward")
 
       +ionSideMenuContent
         +ionNavBar(class="bar-positive")

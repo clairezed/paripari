@@ -5,3 +5,4 @@ Template.tabsLayout.rendered = ->
 Template.tabsLayout.events
   'click [data-action=logout]': (event, template) ->
     Meteor.logout()
+    IonSideMenu.snapper.close();
