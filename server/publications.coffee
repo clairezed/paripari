@@ -45,3 +45,4 @@ Meteor.publish 'bet', (id) ->
   Bets.find {
     _id: id
   }
+

@@ -10,6 +10,7 @@ fourseven:scss
 mquandalle:jade
 coffeescript
 iron:router
+meteoric:ionic
 meteoric:ionic-sass
 meteoric:ionicons-sass
 meteoric:autoform-ionic
@@ -22,5 +23,3 @@ useraccounts:ionic
 service-configuration
 momentjs:moment
 
-fastclick
-meteoric:ionic

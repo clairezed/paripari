@@ -36,11 +36,11 @@ setCurrentBlock = (booleanNo) ->
   currentGuess = if booleanNo is false then "yes" else "no"
   console.log currentGuess
   $currentGuessBlock = $("[data-guess-block='#{currentGuess}']")
-  $currentGuessBlock.data('current-guess', true)
+  $currentGuessBlock.data('current-guess', true).addClass('current')
   $currentGuessBlock.find('input').val('Moi').prop('readOnly', true)
 
   $opponentBlock = $("[data-guess-block]").not($currentGuessBlock)
-  $opponentBlock.data('current-guess', false)
+  $opponentBlock.data('current-guess', false).removeClass('current')
   $opponentBlock.find('input').val('').prop('readOnly', false)
 
 # setCurrentBlock = (currentGuess) ->
